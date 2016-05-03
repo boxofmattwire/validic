@@ -64,6 +64,18 @@ module Validic
       end
     end
 
+    ##
+    # If you want the RAW JSON only.
+    #
+    # @return JSON document
+    def get_json_for(activity_type, options = {})
+      get_request(activity_type, options)
+    end
+
+    def get_latest_json_for(activity_type, options = {})
+      latest(activity_type, options)
+    end
+
     private
 
     def default_headers
